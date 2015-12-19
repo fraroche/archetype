@@ -1,0 +1,428 @@
+These will use the artifact files already in the core ClassRealm instead, to allow them to be included in PluginDescriptor.getArtifacts().
+
+
+[DEBUG] Setting property: classpath.resource.loader.class => 'org.codehaus.plexus.velocity.ContextClassLoaderResourceLoader'.
+[DEBUG] Setting property: site.resource.loader.class => 'org.codehaus.plexus.velocity.SiteResourceLoader'.
+[DEBUG] Setting property: velocimacro.messages.on => 'false'.
+[DEBUG] Setting property: resource.loader => 'classpath,site'.
+[DEBUG] Setting property: runtime.log.invalid.references => 'false'.
+[DEBUG] Setting property: resource.manager.logwhenfound => 'false'.
+[DEBUG] *******************************************************************
+[DEBUG] Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+[DEBUG] RuntimeInstance initializing.
+[DEBUG] Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+[DEBUG] LogSystem has been deprecated. Please use a LogChute implementation.
+[DEBUG] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+[DEBUG] ResourceLoader instantiated: org.codehaus.plexus.velocity.ContextClassLoaderResourceLoader
+[DEBUG] ResourceLoader instantiated: org.codehaus.plexus.velocity.SiteResourceLoader
+[DEBUG] ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+[DEBUG] Default ResourceManager initialization complete.
+[DEBUG] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+[DEBUG] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+[DEBUG] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+[DEBUG] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+[DEBUG] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+[DEBUG] Created '20' parsers.
+[DEBUG] Velocimacro : initialization starting.
+[DEBUG] Velocimacro : allowInline = true : VMs can be defined inline in templates
+[DEBUG] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+[DEBUG] Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+[DEBUG] Velocimacro : autoload off : VM system will not automatically reload global library macros
+[DEBUG] Velocimacro : Velocimacro : initialization complete.
+[DEBUG] RuntimeInstance successfully initialized.
+[DEBUG] Setting property: classpath.resource.loader.class => 'org.codehaus.plexus.velocity.ContextClassLoaderResourceLoader'.
+[DEBUG] Setting property: site.resource.loader.class => 'org.codehaus.plexus.velocity.SiteResourceLoader'.
+[DEBUG] Setting property: velocimacro.messages.on => 'false'.
+[DEBUG] Setting property: resource.loader => 'classpath,site'.
+[DEBUG] Setting property: runtime.log.invalid.references => 'false'.
+[DEBUG] Setting property: resource.manager.logwhenfound => 'false'.
+[DEBUG] *******************************************************************
+[DEBUG] Starting Apache Velocity v1.5 (compiled: 2007-02-22 08:52:29)
+[DEBUG] RuntimeInstance initializing.
+[DEBUG] Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+[DEBUG] LogSystem has been deprecated. Please use a LogChute implementation.
+[DEBUG] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+[DEBUG] ResourceLoader instantiated: org.codehaus.plexus.velocity.ContextClassLoaderResourceLoader
+[DEBUG] ResourceLoader instantiated: org.codehaus.plexus.velocity.SiteResourceLoader
+[DEBUG] ResourceCache: initialized (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+[DEBUG] Default ResourceManager initialization complete.
+[DEBUG] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+[DEBUG] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+[DEBUG] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+[DEBUG] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+[DEBUG] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+[DEBUG] Created '20' parsers.
+[DEBUG] Velocimacro : initialization starting.
+[DEBUG] Velocimacro : allowInline = true : VMs can be defined inline in templates
+[DEBUG] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+[DEBUG] Velocimacro : allowInlineLocal = false : VMs defined inline will be global in scope if allowed.
+[DEBUG] Velocimacro : autoload off : VM system will not automatically reload global library macros
+[DEBUG] Velocimacro : Velocimacro : initialization complete.
+[DEBUG] RuntimeInstance successfully initialized.
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-archetype-plugin:2.2:create-from-project' -->
+[DEBUG]   (f) archetypePostPhase = package
+[DEBUG]   (f) archetypeRegistryFile = /home/nta/.m2/archetype.xml
+[DEBUG]   (f) defaultEncoding = UTF-8
+[DEBUG]   (f) interactive = false
+[DEBUG]   (f) localRepository = Repository[local|file:///home/code/apache/maven/repository]
+[DEBUG]   (f) outputDirectory = /home/nta/views/local/archetype/SwiftRefLoader/target/generated-sources/archetype
+[DEBUG]   (f) project = MavenProject: fr.si2m.rp.swift:SwifRefLoader:1.0.1-SNAPSHOT @ /home/nta/views/local/archetype/SwiftRefLoader/pom.xml
+[DEBUG]   (f) propertyFile = /home/nta/views/local/archetype/archetype.properties
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@c8570c
+[DEBUG] -- end configuration --
+[INFO] [archetype:create-from-project {execution: default-cli}]
+[DEBUG] Found in propertyFile archetype.properties languages = [assembly,  java,  resources]
+[DEBUG] Reading property file /home/nta/views/local/archetype/archetype.properties
+[DEBUG] Read 12 properties
+[DEBUG] Creating ArchetypeConfiguration from ArchetypeDefinition, MavenProject and Properties
+[DEBUG] Adding requiredProperty scm_trunk_url
+[DEBUG] Setting property scm_trunk_url=http://lana2029:8080/svn/arch_java_si2m/SwiftRefLoader/trunk
+[DEBUG] Adding requiredProperty developer_email
+[DEBUG] Setting property developer_email=ntardy@si2m.fr
+[DEBUG] Adding requiredProperty distribution_management_url
+[DEBUG] Setting property distribution_management_url=http://vliql-usil.si2m.tec:8081/nexus/content/repositories
+[DEBUG] Adding requiredProperty main_class_name
+[DEBUG] Setting property main_class_name=fr.si2m.rp.swift.bat.Main
+[DEBUG] Adding requiredProperty organization_name
+[DEBUG] Setting property organization_name=SI2M
+[DEBUG] Adding requiredProperty developer_id
+[DEBUG] Setting property developer_id=idei080
+[DEBUG] Adding requiredProperty developer_name
+[DEBUG] Setting property developer_name=Nicolas Tardy
+[DEBUG] Adding requiredProperty groupId
+[DEBUG] Adding requiredProperty artifactId
+[DEBUG] Adding requiredProperty version
+[DEBUG] Adding requiredProperty package
+[DEBUG] Resolving package in /home/nta/views/local/archetype/SwiftRefLoader using languages [assembly,  java,  resources]
+[DEBUG] Found 1 potential archetype files
+[DEBUG] Found 1 archetype files for package resolution 
+[DEBUG] Package resolved to 
+[INFO] Setting default groupId: fr.si2m.rp.swift
+[INFO] Setting default artifactId: SwifRefLoader
+[INFO] Setting default version: 1.0.1-SNAPSHOT
+[INFO] Setting default package: fr.si2m.rp.swift
+[DEBUG] Creating ArchetypeConfiguration from ArchetypeDefinition, MavenProject and Properties
+[DEBUG] Adding requiredProperty scm_trunk_url
+[DEBUG] Setting property scm_trunk_url=http://lana2029:8080/svn/arch_java_si2m/SwiftRefLoader/trunk
+[DEBUG] Adding requiredProperty developer_email
+[DEBUG] Setting property developer_email=ntardy@si2m.fr
+[DEBUG] Adding requiredProperty groupId
+[DEBUG] Setting property groupId=fr.si2m.rp.swift
+[DEBUG] Adding requiredProperty distribution_management_url
+[DEBUG] Setting property distribution_management_url=http://vliql-usil.si2m.tec:8081/nexus/content/repositories
+[DEBUG] Adding requiredProperty main_class_name
+[DEBUG] Setting property main_class_name=fr.si2m.rp.swift.bat.Main
+[DEBUG] Adding requiredProperty version
+[DEBUG] Setting property version=1.0.1-SNAPSHOT
+[DEBUG] Adding requiredProperty organization_name
+[DEBUG] Setting property organization_name=SI2M
+[DEBUG] Adding requiredProperty developer_id
+[DEBUG] Setting property developer_id=idei080
+[DEBUG] Adding requiredProperty package
+[DEBUG] Setting property package=fr.si2m.rp.swift
+[DEBUG] Adding requiredProperty developer_name
+[DEBUG] Setting property developer_name=Nicolas Tardy
+[DEBUG] Adding requiredProperty artifactId
+[DEBUG] Setting property artifactId=SwifRefLoader
+[DEBUG] Adding requiredProperty groupId
+[DEBUG] Setting property groupId=fr.si2m.rp.swift
+[DEBUG] Adding requiredProperty artifactId
+[DEBUG] Setting property artifactId=fr.si2m.rp.swift
+[DEBUG] Adding requiredProperty version
+[DEBUG] Setting property version=fr.si2m.rp.swift
+[DEBUG] Adding requiredProperty package
+[DEBUG] Setting property package=fr.si2m.rp.swift
+[DEBUG] Entering batch mode
+[DEBUG] Found in propertyFile archetype.properties extensions = [java,  xml,  properties,  sh,  ini]
+[DEBUG] Creating archetype in /home/nta/views/local/archetype/SwiftRefLoader/target/generated-sources/archetype
+[DEBUG] Creating archetype's pom
+[DEBUG] Archetype's files output directory /home/nta/views/local/archetype/SwiftRefLoader/target/generated-sources/archetype/src/main/resources/archetype-resources
+[DEBUG] Starting archetype's descriptor SwifRefLoader
+[DEBUG] Adding requiredProperty scm_trunk_url=http://lana2029:8080/svn/arch_java_si2m/SwiftRefLoader/trunk to archetype's descriptor
+[DEBUG] Adding requiredProperty developer_email=ntardy@si2m.fr to archetype's descriptor
+[DEBUG] Adding requiredProperty distribution_management_url=http://vliql-usil.si2m.tec:8081/nexus/content/repositories to archetype's descriptor
+[DEBUG] Adding requiredProperty main_class_name=fr.si2m.rp.swift.bat.Main to archetype's descriptor
+[DEBUG] Adding requiredProperty organization_name=SI2M to archetype's descriptor
+[DEBUG] Adding requiredProperty developer_id=idei080 to archetype's descriptor
+[DEBUG] Adding requiredProperty developer_name=Nicolas Tardy to archetype's descriptor
+[DEBUG] Resolving files for fr.si2m.rp.swift:SwifRefLoader:jar:1.0.1-SNAPSHOT in /home/nta/views/local/archetype/SwiftRefLoader
+[DEBUG] Resolved 46 files
+[DEBUG] Resolved Files:[SwifRefLoader - go-offline.launch, src/main/java/TestJqlQuery.java, src/main/java/META-INF/persistence.xml, src/main/java/fr/si2m/rp/swift/report/IbanBicReporting.java, src/main/java/fr/si2m/rp/swift/report/IbanStructuresReporting.java, src/main/java/fr/si2m/rp/swift/report/IbanExcludesReporting.java, src/main/java/fr/si2m/rp/swift/inputs/InputIbanExcludesReader.java, src/main/java/fr/si2m/rp/swift/inputs/InputIbanBicReader.java, src/main/java/fr/si2m/rp/swift/inputs/InputFileReader.java, src/main/java/fr/si2m/rp/swift/inputs/InputIbanStructuresReader.java, src/main/java/fr/si2m/rp/swift/orm/IbanExcludes.java, src/main/java/fr/si2m/rp/swift/orm/IbanStructures.java, src/main/java/fr/si2m/rp/swift/orm/IbanBic.java, src/main/java/fr/si2m/rp/swift/util/FolderUnzipper.java, src/main/java/fr/si2m/rp/swift/util/DateUtils.java, src/main/java/fr/si2m/rp/swift/bat/LoadIbanStructures.java, src/main/java/fr/si2m/rp/swift/bat/LoadSwiftRef.java, src/main/java/fr/si2m/rp/swift/bat/LoadIbanBic.java, src/main/java/fr/si2m/rp/swift/bat/LoadIbanExcludes.java, src/main/java/fr/si2m/rp/swift/bat/Main.java, src/main/java/fr/si2m/rp/swift/outputs/OutputIbanExcludesWriter.java, src/main/java/fr/si2m/rp/swift/outputs/OutputIbanStructuresWriter.java, src/main/java/fr/si2m/rp/swift/outputs/OutputIbanBicWriter.java, src/main/resources/SwifRefLoader.properties, src/main/resources/SwifRefLoader_logback.xml, src/main/resources/SwifRefLoader.sh, src/main/resources/IbanBic.hbm.xml, src/main/resources/hibernate.ini, src/main/resources/hibernate.cfg.xml, src/main/resources/hibernate.properties, src/main/resources/hibernate.reveng.xml, src/main/resources/SwifRefLoader.ini, src/main/resources/IbanExcludes.hbm.xml, src/main/resources/IbanStructures.hbm.xml, src/main/assembly/assembly-descriptor.xml, src/test/resources/ibanplus_v3_sample_txt_0.zip, src/test/resources/createTable_MySQL.sql, src/test/resources/IBANPLUS_20131101_SMALL_TXT.zip, src/test/resources/IBANPLUS_20131101_FERM_TXT.zip, src/test/resources/IBANPLUS_20131101_KMO_TXT.zip, src/test/resources/IBANPLUS_20131101_TXT.zip, src/test/resources/IBANPLUS_STRUCT_VIDE_20131101_TXT.zip, Config  core - hibernate v4.launch, SwifRefLoader - clean install.launch, Conf JPA - hibernate v4.launch, SwifRefLoader - purge, go-offline, resolve-plugins.launch]
+[DEBUG] Scanned for files 46
+[DEBUG] - SwifRefLoader - go-offline.launch
+[DEBUG] - src/main/java/TestJqlQuery.java
+[DEBUG] - src/main/java/META-INF/persistence.xml
+[DEBUG] - src/main/java/fr/si2m/rp/swift/report/IbanBicReporting.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/report/IbanStructuresReporting.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/report/IbanExcludesReporting.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/inputs/InputIbanExcludesReader.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/inputs/InputIbanBicReader.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/inputs/InputFileReader.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/inputs/InputIbanStructuresReader.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/orm/IbanExcludes.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/orm/IbanStructures.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/orm/IbanBic.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/util/FolderUnzipper.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/util/DateUtils.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/bat/LoadIbanStructures.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/bat/LoadSwiftRef.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/bat/LoadIbanBic.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/bat/LoadIbanExcludes.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/bat/Main.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/outputs/OutputIbanExcludesWriter.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/outputs/OutputIbanStructuresWriter.java
+[DEBUG] - src/main/java/fr/si2m/rp/swift/outputs/OutputIbanBicWriter.java
+[DEBUG] - src/main/resources/SwifRefLoader.properties
+[DEBUG] - src/main/resources/SwifRefLoader_logback.xml
+[DEBUG] - src/main/resources/SwifRefLoader.sh
+[DEBUG] - src/main/resources/IbanBic.hbm.xml
+[DEBUG] - src/main/resources/hibernate.ini
+[DEBUG] - src/main/resources/hibernate.cfg.xml
+[DEBUG] - src/main/resources/hibernate.properties
+[DEBUG] - src/main/resources/hibernate.reveng.xml
+[DEBUG] - src/main/resources/SwifRefLoader.ini
+[DEBUG] - src/main/resources/IbanExcludes.hbm.xml
+[DEBUG] - src/main/resources/IbanStructures.hbm.xml
+[DEBUG] - src/main/assembly/assembly-descriptor.xml
+[DEBUG] - src/test/resources/ibanplus_v3_sample_txt_0.zip
+[DEBUG] - src/test/resources/createTable_MySQL.sql
+[DEBUG] - src/test/resources/IBANPLUS_20131101_SMALL_TXT.zip
+[DEBUG] - src/test/resources/IBANPLUS_20131101_FERM_TXT.zip
+[DEBUG] - src/test/resources/IBANPLUS_20131101_KMO_TXT.zip
+[DEBUG] - src/test/resources/IBANPLUS_20131101_TXT.zip
+[DEBUG] - src/test/resources/IBANPLUS_STRUCT_VIDE_20131101_TXT.zip
+[DEBUG] - Config  core - hibernate v4.launch
+[DEBUG] - SwifRefLoader - clean install.launch
+[DEBUG] - Conf JPA - hibernate v4.launch
+[DEBUG] - SwifRefLoader - purge, go-offline, resolve-plugins.launch
+[DEBUG] Resolving filesets with package=fr.si2m.rp.swift, languages=[assembly,  java,  resources] and extentions=[java,  xml,  properties,  sh,  ini]
+[DEBUG] Using languages includes assembly/**, java/**, resources/**
+[DEBUG] Using filtered includes **/*.java,**/*. xml,**/*. properties,**/*. sh,**/*. ini
+[DEBUG] Scanned 34 sources in 46 files
+[DEBUG] Scanned 21 filtered files in 34 files
+Scanned 21 filtered files in 34 files: src/main/java/TestJqlQuery.java, src/main/java/fr/si2m/rp/swift/report/IbanBicReporting.java, src/main/java/fr/si2m/rp/swift/report/IbanStructuresReporting.java, src/main/java/fr/si2m/rp/swift/report/IbanExcludesReporting.java, src/main/java/fr/si2m/rp/swift/inputs/InputIbanExcludesReader.java, src/main/java/fr/si2m/rp/swift/inputs/InputIbanBicReader.java, src/main/java/fr/si2m/rp/swift/inputs/InputFileReader.java, src/main/java/fr/si2m/rp/swift/inputs/InputIbanStructuresReader.java, src/main/java/fr/si2m/rp/swift/orm/IbanExcludes.java, src/main/java/fr/si2m/rp/swift/orm/IbanStructures.java, src/main/java/fr/si2m/rp/swift/orm/IbanBic.java, src/main/java/fr/si2m/rp/swift/util/FolderUnzipper.java, src/main/java/fr/si2m/rp/swift/util/DateUtils.java, src/main/java/fr/si2m/rp/swift/bat/LoadIbanStructures.java, src/main/java/fr/si2m/rp/swift/bat/LoadSwiftRef.java, src/main/java/fr/si2m/rp/swift/bat/LoadIbanBic.java, src/main/java/fr/si2m/rp/swift/bat/LoadIbanExcludes.java, src/main/java/fr/si2m/rp/swift/bat/Main.java, src/main/java/fr/si2m/rp/swift/outputs/OutputIbanExcludesWriter.java, src/main/java/fr/si2m/rp/swift/outputs/OutputIbanStructuresWriter.java, src/main/java/fr/si2m/rp/swift/outputs/OutputIbanBicWriter.java
+[DEBUG] Creating filesets packaged (fr.si2m.rp.swift) filtered at level 3
+[DEBUG] Sorted 1 groups in 21 files
+[DEBUG] Sorted Files: [src/main/java/TestJqlQuery.java, src/main/java/fr/si2m/rp/swift/report/IbanBicReporting.java, src/main/java/fr/si2m/rp/swift/report/IbanStructuresReporting.java, src/main/java/fr/si2m/rp/swift/report/IbanExcludesReporting.java, src/main/java/fr/si2m/rp/swift/inputs/InputIbanExcludesReader.java, src/main/java/fr/si2m/rp/swift/inputs/InputIbanBicReader.java, src/main/java/fr/si2m/rp/swift/inputs/InputFileReader.java, src/main/java/fr/si2m/rp/swift/inputs/InputIbanStructuresReader.java, src/main/java/fr/si2m/rp/swift/orm/IbanExcludes.java, src/main/java/fr/si2m/rp/swift/orm/IbanStructures.java, src/main/java/fr/si2m/rp/swift/orm/IbanBic.java, src/main/java/fr/si2m/rp/swift/util/FolderUnzipper.java, src/main/java/fr/si2m/rp/swift/util/DateUtils.java, src/main/java/fr/si2m/rp/swift/bat/LoadIbanStructures.java, src/main/java/fr/si2m/rp/swift/bat/LoadSwiftRef.java, src/main/java/fr/si2m/rp/swift/bat/LoadIbanBic.java, src/main/java/fr/si2m/rp/swift/bat/LoadIbanExcludes.java, src/main/java/fr/si2m/rp/swift/bat/Main.java, src/main/java/fr/si2m/rp/swift/outputs/OutputIbanExcludesWriter.java, src/main/java/fr/si2m/rp/swift/outputs/OutputIbanStructuresWriter.java, src/main/java/fr/si2m/rp/swift/outputs/OutputIbanBicWriter.java]
+[DEBUG] Creating filesets for group src/main/java
+[DEBUG] Scanned 20 packaged files in 21 files
+[DEBUG] Found packaged Files:[report/IbanBicReporting.java, report/IbanStructuresReporting.java, report/IbanExcludesReporting.java, inputs/InputIbanExcludesReader.java, inputs/InputIbanBicReader.java, inputs/InputFileReader.java, inputs/InputIbanStructuresReader.java, orm/IbanExcludes.java, orm/IbanStructures.java, orm/IbanBic.java, util/FolderUnzipper.java, util/DateUtils.java, bat/LoadIbanStructures.java, bat/LoadSwiftRef.java, bat/LoadIbanBic.java, bat/LoadIbanExcludes.java, bat/Main.java, outputs/OutputIbanExcludesWriter.java, outputs/OutputIbanStructuresWriter.java, outputs/OutputIbanBicWriter.java]
+[DEBUG] Scanned 1 unpackaged files in 21 files
+[DEBUG] Found unpackaged Files:[TestJqlQuery.java]
+[DEBUG] Found packaged extensions [java]
+[DEBUG] Created Fileset src/main/java (Filtered-Packaged) [**/*.java -- TestJqlQuery.java]
+[DEBUG] Found unpackaged extensions [java]
+[DEBUG] Created Fileset src/main/java (Filtered-Flat) [TestJqlQuery.java -- ]
+[DEBUG] Resolved fileSets [src/main/java (Filtered-Packaged) [**/*.java -- TestJqlQuery.java], src/main/java (Filtered-Flat) [TestJqlQuery.java -- ]]
+[DEBUG] Creating filesets packaged (fr.si2m.rp.swift) at level 3
+[DEBUG] Sorted 3 groups in 13 files
+[DEBUG] Sorted Files: [src/main/java/META-INF/persistence.xml, src/main/resources/SwifRefLoader.properties, src/main/resources/SwifRefLoader_logback.xml, src/main/resources/SwifRefLoader.sh, src/main/resources/IbanBic.hbm.xml, src/main/resources/hibernate.ini, src/main/resources/hibernate.cfg.xml, src/main/resources/hibernate.properties, src/main/resources/hibernate.reveng.xml, src/main/resources/SwifRefLoader.ini, src/main/resources/IbanExcludes.hbm.xml, src/main/resources/IbanStructures.hbm.xml, src/main/assembly/assembly-descriptor.xml]
+[DEBUG] Creating filesets for group src/main/assembly
+[DEBUG] Scanned 0 packaged files in 1 files
+[DEBUG] Found packaged Files:[]
+[DEBUG] Scanned 1 unpackaged files in 1 files
+[DEBUG] Found unpackaged Files:[assembly-descriptor.xml]
+[DEBUG] Found packaged extensions []
+[DEBUG] Found unpackaged extensions [xml]
+[DEBUG] Created Fileset src/main/assembly (Copied-Flat) [**/*.xml -- ]
+[DEBUG] Creating filesets for group src/main/resources
+[DEBUG] Scanned 0 packaged files in 11 files
+[DEBUG] Found packaged Files:[]
+[DEBUG] Scanned 11 unpackaged files in 11 files
+[DEBUG] Found unpackaged Files:[SwifRefLoader.properties, SwifRefLoader_logback.xml, SwifRefLoader.sh, IbanBic.hbm.xml, hibernate.ini, hibernate.cfg.xml, hibernate.properties, hibernate.reveng.xml, SwifRefLoader.ini, IbanExcludes.hbm.xml, IbanStructures.hbm.xml]
+[DEBUG] Found packaged extensions []
+[DEBUG] Found unpackaged extensions [xml, properties, sh, ini]
+[DEBUG] Created Fileset src/main/resources (Copied-Flat) [**/*.xml, **/*.properties, **/*.sh, **/*.ini -- ]
+[DEBUG] Creating filesets for group src/main/java
+[DEBUG] Scanned 0 packaged files in 1 files
+[DEBUG] Found packaged Files:[]
+[DEBUG] Scanned 1 unpackaged files in 1 files
+[DEBUG] Found unpackaged Files:[META-INF/persistence.xml]
+[DEBUG] Found packaged extensions []
+[DEBUG] Found unpackaged extensions [xml]
+[DEBUG] Created Fileset src/main/java (Copied-Flat) [**/*.xml -- ]
+[DEBUG] Resolved fileSets [src/main/assembly (Copied-Flat) [**/*.xml -- ], src/main/resources (Copied-Flat) [**/*.xml, **/*.properties, **/*.sh, **/*.ini -- ], src/main/java (Copied-Flat) [**/*.xml -- ]]
+[DEBUG] Scanned 0 resources in 12 files
+[DEBUG] Scanned 7 test sources in 12 files
+[DEBUG] Scanned 0 filtered files in 7 files
+Scanned 0 filtered files in 7 files: 
+[DEBUG] Creating filesets packaged (fr.si2m.rp.swift) at level 3
+[DEBUG] Sorted 1 groups in 7 files
+[DEBUG] Sorted Files: [src/test/resources/ibanplus_v3_sample_txt_0.zip, src/test/resources/createTable_MySQL.sql, src/test/resources/IBANPLUS_20131101_SMALL_TXT.zip, src/test/resources/IBANPLUS_20131101_FERM_TXT.zip, src/test/resources/IBANPLUS_20131101_KMO_TXT.zip, src/test/resources/IBANPLUS_20131101_TXT.zip, src/test/resources/IBANPLUS_STRUCT_VIDE_20131101_TXT.zip]
+[DEBUG] Creating filesets for group src/test/resources
+[DEBUG] Scanned 0 packaged files in 7 files
+[DEBUG] Found packaged Files:[]
+[DEBUG] Scanned 7 unpackaged files in 7 files
+[DEBUG] Found unpackaged Files:[ibanplus_v3_sample_txt_0.zip, createTable_MySQL.sql, IBANPLUS_20131101_SMALL_TXT.zip, IBANPLUS_20131101_FERM_TXT.zip, IBANPLUS_20131101_KMO_TXT.zip, IBANPLUS_20131101_TXT.zip, IBANPLUS_STRUCT_VIDE_20131101_TXT.zip]
+[DEBUG] Found packaged extensions []
+[DEBUG] Found unpackaged extensions [zip, sql]
+[DEBUG] Created Fileset src/test/resources (Copied-Flat) [**/*.zip, **/*.sql -- ]
+[DEBUG] Resolved fileSets [src/test/resources (Copied-Flat) [**/*.zip, **/*.sql -- ]]
+[DEBUG] Scanned 0 test resources in 5 files
+[DEBUG] Scanned 0 site resources in 5 files
+[DEBUG] Scanned 0 other sources in 5 files at level 3
+[DEBUG] Scanned 0 other sources in 5 files at level 2
+[DEBUG] Scanned 0 other resources in 5 files at level 2
+[DEBUG] Scanned 5 other resources in 5 files at level 0
+[DEBUG] Scanned 0 filtered files in 5 files
+Scanned 0 filtered files in 5 files: 
+[DEBUG] Creating filesets at level 0
+[DEBUG] Created Fileset  (Copied-Flat) [SwifRefLoader - go-offline.launch, Config  core - hibernate v4.launch, SwifRefLoader - clean install.launch, Conf JPA - hibernate v4.launch, SwifRefLoader - purge, go-offline, resolve-plugins.launch -- ]
+[DEBUG] Resolved fileSets [ (Copied-Flat) [SwifRefLoader - go-offline.launch, Config  core - hibernate v4.launch, SwifRefLoader - clean install.launch, Conf JPA - hibernate v4.launch, SwifRefLoader - purge, go-offline, resolve-plugins.launch -- ]]
+[DEBUG] Resolved filesets for SwifRefLoader
+[DEBUG] Creating Archetype/Module files from /home/nta/views/local/archetype/SwiftRefLoader to /home/nta/views/local/archetype/SwiftRefLoader/target/generated-sources/archetype/src/main/resources/archetype-resources
+[DEBUG] Using fileset src/main/java (Filtered-Packaged) [**/*.java -- TestJqlQuery.java]
+[DEBUG] Scanned 21 resources
+[DEBUG] Package as Directory: Package:fr.si2m.rp.swift->fr/si2m/rp/swift
+[DEBUG] InputFileName:src/main/java/TestJqlQuery.java
+[DEBUG] OutputFileName:src/main/java/TestJqlQuery.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/report/IbanBicReporting.java
+[DEBUG] OutputFileName:src/main/java/report/IbanBicReporting.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/report/IbanStructuresReporting.java
+[DEBUG] OutputFileName:src/main/java/report/IbanStructuresReporting.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/report/IbanExcludesReporting.java
+[DEBUG] OutputFileName:src/main/java/report/IbanExcludesReporting.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/inputs/InputIbanExcludesReader.java
+[DEBUG] OutputFileName:src/main/java/inputs/InputIbanExcludesReader.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/inputs/InputIbanBicReader.java
+[DEBUG] OutputFileName:src/main/java/inputs/InputIbanBicReader.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/inputs/InputFileReader.java
+[DEBUG] OutputFileName:src/main/java/inputs/InputFileReader.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/inputs/InputIbanStructuresReader.java
+[DEBUG] OutputFileName:src/main/java/inputs/InputIbanStructuresReader.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/orm/IbanExcludes.java
+[DEBUG] OutputFileName:src/main/java/orm/IbanExcludes.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/orm/IbanStructures.java
+[DEBUG] OutputFileName:src/main/java/orm/IbanStructures.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/orm/IbanBic.java
+[DEBUG] OutputFileName:src/main/java/orm/IbanBic.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/util/FolderUnzipper.java
+[DEBUG] OutputFileName:src/main/java/util/FolderUnzipper.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/util/DateUtils.java
+[DEBUG] OutputFileName:src/main/java/util/DateUtils.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/bat/LoadIbanStructures.java
+[DEBUG] OutputFileName:src/main/java/bat/LoadIbanStructures.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/bat/LoadSwiftRef.java
+[DEBUG] OutputFileName:src/main/java/bat/LoadSwiftRef.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/bat/LoadIbanBic.java
+[DEBUG] OutputFileName:src/main/java/bat/LoadIbanBic.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/bat/LoadIbanExcludes.java
+[DEBUG] OutputFileName:src/main/java/bat/LoadIbanExcludes.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/bat/Main.java
+[DEBUG] OutputFileName:src/main/java/bat/Main.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/outputs/OutputIbanExcludesWriter.java
+[DEBUG] OutputFileName:src/main/java/outputs/OutputIbanExcludesWriter.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/outputs/OutputIbanStructuresWriter.java
+[DEBUG] OutputFileName:src/main/java/outputs/OutputIbanStructuresWriter.java
+[DEBUG] InputFileName:src/main/java/fr/si2m/rp/swift/outputs/OutputIbanBicWriter.java
+[DEBUG] OutputFileName:src/main/java/outputs/OutputIbanBicWriter.java
+[DEBUG] Processed src/main/java files
+[DEBUG] Using fileset src/main/java (Filtered-Flat) [TestJqlQuery.java -- ]
+[DEBUG] Scanned 1 resources
+[DEBUG] Package as Directory: Package:fr.si2m.rp.swift->fr/si2m/rp/swift
+[DEBUG] InputFileName:src/main/java/TestJqlQuery.java
+[DEBUG] OutputFileName:src/main/java/TestJqlQuery.java
+[DEBUG] Processed src/main/java files
+[DEBUG] Using fileset src/main/assembly (Copied-Flat) [**/*.xml -- ]
+[DEBUG] Scanned 1 resources
+[DEBUG] Package as Directory: Package:fr.si2m.rp.swift->fr/si2m/rp/swift
+[DEBUG] InputFileName:src/main/assembly/assembly-descriptor.xml
+[DEBUG] OutputFileName:src/main/assembly/assembly-descriptor.xml
+[DEBUG] Copied src/main/assembly files
+[DEBUG] Using fileset src/main/resources (Copied-Flat) [**/*.xml, **/*.properties, **/*.sh, **/*.ini -- ]
+[DEBUG] Scanned 11 resources
+[DEBUG] Package as Directory: Package:fr.si2m.rp.swift->fr/si2m/rp/swift
+[DEBUG] InputFileName:src/main/resources/SwifRefLoader.properties
+[DEBUG] OutputFileName:src/main/resources/SwifRefLoader.properties
+[DEBUG] InputFileName:src/main/resources/SwifRefLoader_logback.xml
+[DEBUG] OutputFileName:src/main/resources/SwifRefLoader_logback.xml
+[DEBUG] InputFileName:src/main/resources/SwifRefLoader.sh
+[DEBUG] OutputFileName:src/main/resources/SwifRefLoader.sh
+[DEBUG] InputFileName:src/main/resources/IbanBic.hbm.xml
+[DEBUG] OutputFileName:src/main/resources/IbanBic.hbm.xml
+[DEBUG] InputFileName:src/main/resources/hibernate.ini
+[DEBUG] OutputFileName:src/main/resources/hibernate.ini
+[DEBUG] InputFileName:src/main/resources/hibernate.cfg.xml
+[DEBUG] OutputFileName:src/main/resources/hibernate.cfg.xml
+[DEBUG] InputFileName:src/main/resources/hibernate.properties
+[DEBUG] OutputFileName:src/main/resources/hibernate.properties
+[DEBUG] InputFileName:src/main/resources/hibernate.reveng.xml
+[DEBUG] OutputFileName:src/main/resources/hibernate.reveng.xml
+[DEBUG] InputFileName:src/main/resources/SwifRefLoader.ini
+[DEBUG] OutputFileName:src/main/resources/SwifRefLoader.ini
+[DEBUG] InputFileName:src/main/resources/IbanExcludes.hbm.xml
+[DEBUG] OutputFileName:src/main/resources/IbanExcludes.hbm.xml
+[DEBUG] InputFileName:src/main/resources/IbanStructures.hbm.xml
+[DEBUG] OutputFileName:src/main/resources/IbanStructures.hbm.xml
+[DEBUG] Copied src/main/resources files
+[DEBUG] Using fileset src/main/java (Copied-Flat) [**/*.xml -- ]
+[DEBUG] Scanned 1 resources
+[DEBUG] Package as Directory: Package:fr.si2m.rp.swift->fr/si2m/rp/swift
+[DEBUG] InputFileName:src/main/java/META-INF/persistence.xml
+[DEBUG] OutputFileName:src/main/java/META-INF/persistence.xml
+[DEBUG] Copied src/main/java files
+[DEBUG] Using fileset src/test/resources (Copied-Flat) [**/*.zip, **/*.sql -- ]
+[DEBUG] Scanned 7 resources
+[DEBUG] Package as Directory: Package:fr.si2m.rp.swift->fr/si2m/rp/swift
+[DEBUG] InputFileName:src/test/resources/ibanplus_v3_sample_txt_0.zip
+[DEBUG] OutputFileName:src/test/resources/ibanplus_v3_sample_txt_0.zip
+[DEBUG] InputFileName:src/test/resources/createTable_MySQL.sql
+[DEBUG] OutputFileName:src/test/resources/createTable_MySQL.sql
+[DEBUG] InputFileName:src/test/resources/IBANPLUS_20131101_SMALL_TXT.zip
+[DEBUG] OutputFileName:src/test/resources/IBANPLUS_20131101_SMALL_TXT.zip
+[DEBUG] InputFileName:src/test/resources/IBANPLUS_20131101_FERM_TXT.zip
+[DEBUG] OutputFileName:src/test/resources/IBANPLUS_20131101_FERM_TXT.zip
+[DEBUG] InputFileName:src/test/resources/IBANPLUS_20131101_KMO_TXT.zip
+[DEBUG] OutputFileName:src/test/resources/IBANPLUS_20131101_KMO_TXT.zip
+[DEBUG] InputFileName:src/test/resources/IBANPLUS_20131101_TXT.zip
+[DEBUG] OutputFileName:src/test/resources/IBANPLUS_20131101_TXT.zip
+[DEBUG] InputFileName:src/test/resources/IBANPLUS_STRUCT_VIDE_20131101_TXT.zip
+[DEBUG] OutputFileName:src/test/resources/IBANPLUS_STRUCT_VIDE_20131101_TXT.zip
+[DEBUG] Copied src/test/resources files
+[DEBUG] Using fileset  (Copied-Flat) [SwifRefLoader - go-offline.launch, Config  core - hibernate v4.launch, SwifRefLoader - clean install.launch, Conf JPA - hibernate v4.launch, SwifRefLoader - purge, go-offline, resolve-plugins.launch -- ]
+[DEBUG] Scanned 5 resources
+[DEBUG] Package as Directory: Package:fr.si2m.rp.swift->fr/si2m/rp/swift
+[DEBUG] InputFileName:SwifRefLoader - go-offline.launch
+[DEBUG] OutputFileName:SwifRefLoader - go-offline.launch
+[DEBUG] InputFileName:Config  core - hibernate v4.launch
+[DEBUG] OutputFileName:Config  core - hibernate v4.launch
+[DEBUG] InputFileName:SwifRefLoader - clean install.launch
+[DEBUG] OutputFileName:SwifRefLoader - clean install.launch
+[DEBUG] InputFileName:Conf JPA - hibernate v4.launch
+[DEBUG] OutputFileName:Conf JPA - hibernate v4.launch
+[DEBUG] InputFileName:SwifRefLoader - purge, go-offline, resolve-plugins.launch
+[DEBUG] OutputFileName:SwifRefLoader - purge, go-offline, resolve-plugins.launch
+[DEBUG] Copied  files
+[DEBUG] Created files for SwifRefLoader
+[DEBUG] Created Archetype SwifRefLoader template pom(s)
+[DEBUG] Archetype SwifRefLoader descriptor written
+[DEBUG] Added basic integration test
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Building WhiteProjectBatch
+[INFO]    task-segment: [package]
+[INFO] ------------------------------------------------------------------------
+[INFO] [resources:resources {execution: default-resources}]
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 48 resources
+[INFO] [resources:testResources {execution: default-testResources}]
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 2 resources
+[INFO] [archetype:jar {execution: default-jar}]
+[INFO] Building archetype jar: /home/nta/views/local/archetype/SwiftRefLoader/target/generated-sources/archetype/target/WhiteProjectBatch-0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1 second
+[INFO] Finished at: Tue Nov 26 14:16:21 CET 2013
+[INFO] Final Memory: 18M/168M
+[INFO] ------------------------------------------------------------------------
+[INFO] Archetype created in /home/nta/views/local/archetype/SwiftRefLoader/target/generated-sources/archetype
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5 seconds
+[INFO] Finished at: Tue Nov 26 14:16:21 CET 2013
+[INFO] Final Memory: 24M/243M
+[INFO] ------------------------------------------------------------------------
+

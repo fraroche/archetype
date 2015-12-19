@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns="urn:v1_0_0:schema:zone:si2m:fr" 
+	targetNamespace="urn:v1_0_0:schema:zone:si2m:fr" 
+	attributeFormDefault="unqualified" 
+	elementFormDefault="unqualified">
+<!-- 	<xsd:complexType name="institution"> -->
+<!-- 		<xsd:sequence> -->
+<!-- 			<xsd:element name="mofificationFlag" minOccurs="1" maxOccurs="1"> -->
+<!-- 				<xsd:annotation> -->
+<!-- 					<xsd:documentation>A:addition, M:modification, D:deletion</xsd:documentation> -->
+<!-- 				</xsd:annotation> -->
+<!-- 				<xsd:simpleType> -->
+<!-- 					<xsd:restriction base="xsd:string"> -->
+<!-- 						<xsd:enumeration value="A" /> -->
+<!-- 						<xsd:enumeration value="M" /> -->
+<!-- 						<xsd:enumeration value="D" /> -->
+<!-- 					</xsd:restriction> -->
+<!-- 				</xsd:simpleType> -->
+<!-- 			</xsd:element> -->
+<!-- 			<xsd:element name="key" minOccurs="1" maxOccurs="1" type="keyType" /> -->
+<!-- 			<xsd:element name="name" maxOccurs="1" minOccurs="1"> -->
+<!-- 				<xsd:simpleType> -->
+<!-- 					<xsd:restriction base="xsd:string"> -->
+<!-- 						<xsd:maxLength value="105" /> -->
+<!-- 					</xsd:restriction> -->
+<!-- 				</xsd:simpleType> -->
+<!-- 			</xsd:element> -->
+<!-- 			<xsd:element name="country" minOccurs="1" maxOccurs="1" type="countryType" /> -->
+<!-- 			<xsd:element name="ibanBic" minOccurs="1" maxOccurs="1" type="ibanBicType" /> -->
+<!-- 			<xsd:element name="routingBic" minOccurs="1" maxOccurs="1"> -->
+<!-- 				<xsd:simpleType> -->
+<!-- 					<xsd:restriction base="xsd:string"> -->
+<!-- 						<xsd:maxLength value="11" /> -->
+<!-- 					</xsd:restriction> -->
+<!-- 				</xsd:simpleType> -->
+<!-- 			</xsd:element> -->
+<!-- 			<xsd:element name="serviceContexte" minOccurs="0" maxOccurs="1"> -->
+<!-- 				<xsd:simpleType> -->
+<!-- 					<xsd:restriction base="xsd:string"> -->
+<!-- 						<xsd:maxLength value="8" /> -->
+<!-- 					</xsd:restriction> -->
+<!-- 				</xsd:simpleType> -->
+<!-- 			</xsd:element> -->
+<!-- 			<xsd:element name="fieldA" minOccurs="0" maxOccurs="1"> -->
+<!-- 				<xsd:simpleType> -->
+<!-- 					<xsd:restriction base="xsd:string"> -->
+<!-- 						<xsd:maxLength value="35" /> -->
+<!-- 					</xsd:restriction> -->
+<!-- 				</xsd:simpleType> -->
+<!-- 			</xsd:element> -->
+<!-- 			<xsd:element name="fieldB" minOccurs="0" maxOccurs="1"> -->
+<!-- 				<xsd:simpleType> -->
+<!-- 					<xsd:restriction base="xsd:string"> -->
+<!-- 						<xsd:maxLength value="70" /> -->
+<!-- 					</xsd:restriction> -->
+<!-- 				</xsd:simpleType> -->
+<!-- 			</xsd:element> -->
+<!-- 		</xsd:sequence> -->
+<!-- 	</xsd:complexType> -->
+<!-- 	<xsd:complexType name="keyType"> -->
+<!-- 		<xsd:sequence> -->
+<!-- 			<xsd:element name="ibanNationalId" type="ibanNationalIdType" minOccurs="1" maxOccurs="1" /> -->
+<!-- 			<xsd:element name="recordKey" minOccurs="1" maxOccurs="1"> -->
+<!-- 				<xsd:simpleType> -->
+<!-- 					<xsd:restriction base="xsd:string"> -->
+<!-- 						<xsd:maxLength value="12" /> -->
+<!-- 					</xsd:restriction> -->
+<!-- 				</xsd:simpleType> -->
+<!-- 			</xsd:element> -->
+<!-- 		</xsd:sequence> -->
+<!-- 	</xsd:complexType> -->
+<!-- 	<xsd:complexType name="countryType"> -->
+<!-- 		<xsd:sequence> -->
+<!-- 			<xsd:element name="name" minOccurs="1" maxOccurs="1"> -->
+<!-- 				<xsd:simpleType> -->
+<!-- 					<xsd:restriction base="xsd:string"> -->
+<!-- 						<xsd:maxLength value="70" /> -->
+<!-- 					</xsd:restriction> -->
+<!-- 				</xsd:simpleType> -->
+<!-- 			</xsd:element> -->
+<!-- 			<xsd:element name="isoCode" minOccurs="1" maxOccurs="1"> -->
+<!-- 				<xsd:simpleType> -->
+<!-- 					<xsd:restriction base="xsd:string"> -->
+<!-- 						<xsd:maxLength value="2" /> -->
+<!-- 					</xsd:restriction> -->
+<!-- 				</xsd:simpleType> -->
+<!-- 			</xsd:element> -->
+<!-- 			<xsd:element name="isoCodeIban" minOccurs="1" maxOccurs="1"> -->
+<!-- 				<xsd:simpleType> -->
+<!-- 					<xsd:restriction base="xsd:string"> -->
+<!-- 						<xsd:maxLength value="2" /> -->
+<!-- 					</xsd:restriction> -->
+<!-- 				</xsd:simpleType> -->
+<!-- 			</xsd:element> -->
+<!-- 		</xsd:sequence> -->
+<!-- 	</xsd:complexType> -->
+	<xsd:simpleType name="nomPrenomType">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="20" />
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,21 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+<!--   <table-filter match-catalog="RP_${batchName}" match-name="RNDIBBC" package="${groupId}.orm"/> -->
+<!--   <table-filter match-catalog="RP_${batchName}" match-name="RNDIBEX" package="${groupId}.orm"/> -->
+<!--   <table-filter match-catalog="RP_${batchName}" match-name="RNDIBST" package="${groupId}.orm"/> -->
+<!--   <table catalog="RP_${batchName}" name="RNDIBBC" class="IbanBic"/> -->
+<!--   <table catalog="RP_${batchName}" name="RNDIBEX" class="IbanExcludes"/> -->
+<!--   <table catalog="RP_${batchName}" name="RNDIBST" class="IbanStructures"/> -->
+  
+  <table-filter match-schema="EJRA01A" match-name="RNDIBBC" package="${groupId}.orm"/>
+  <table-filter match-schema="EJRA01A"  match-name="RNDIBEX" package="${groupId}.orm"/>
+  <table-filter match-schema="EJRA01A"  match-name="RNDIBST" package="${groupId}.orm"/>
+  <table schema="EJRA01A" name="RNDIBBC" class="IbanBic"/>
+  <table schema="EJRA01A" name="RNDIBEX" class="IbanExcludes"/>
+  <table schema="EJRA01A" name="RNDIBST" class="IbanStructures"/>
+</hibernate-reverse-engineering>

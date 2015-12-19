@@ -1,0 +1,46 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+	<id>pack</id>
+	<formats>
+		<format>zip</format>
+	</formats>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>/batch/script/${project.name}Libs</outputDirectory>
+			<useProjectArtifact>false</useProjectArtifact>
+			<unpack>false</unpack>
+			<scope>runtime</scope>
+		</dependencySet>
+	</dependencySets>
+	<fileSets>
+		<fileSet>
+			<directory>${project.basedir}/target</directory>
+			<outputDirectory>/batch/script</outputDirectory>
+			<includes>
+				<include>${project.name}.jar</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/target/filtered-resources</directory>
+			<outputDirectory>/batch/${chaine.exp}/script</outputDirectory>
+			<includes>
+				<include>${project.name}.sh</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/target/filtered-resources</directory>
+			<outputDirectory>/batch/${chaine.exp}/file</outputDirectory>
+			<includes>
+				<include>*.ini</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<directory>${project.basedir}/src/main/resources</directory>
+			<outputDirectory>/batch/etc</outputDirectory>
+			<includes>
+				<include>${project.name}_logback.xml</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</assembly>

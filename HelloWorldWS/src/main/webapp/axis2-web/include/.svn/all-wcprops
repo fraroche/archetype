@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/include
+END
+httpbase.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/include/httpbase.jsp
+END
+adminheader.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/include/adminheader.jsp
+END
+link-footer.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/include/link-footer.jsp
+END
+adminfooter.inc
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/include/adminfooter.inc
+END
+footer.inc
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/include/footer.inc
+END
+adminheader.inc
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/include/adminheader.inc
+END
+header.inc
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/include/header.inc
+END
+link-footer.inc
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/include/link-footer.inc
+END

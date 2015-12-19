@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/Error
+END
+GenError.html
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/Error/GenError.html
+END
+error500.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/Error/error500.jsp
+END
+error404.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/Error/error404.jsp
+END
+AuthError.html
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/arch_java_si2m/!svn/ver/1324/SWIFT/BicPlusIbanWS/branches/WS_WITH_RAMPART_USERNAME/src/main/webapp/axis2-web/Error/AuthError.html
+END

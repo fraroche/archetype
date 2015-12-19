@@ -1,0 +1,141 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4 nov. 2013 15:49:58 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="${groupId}.orm.IbanStructures" table="RNDIBST">
+        <id name="noInterne" type="int">
+            <column name="NO_INTERNE" />
+            <generator class="increment" />
+        </id>
+        <property name="cdIbanPaysIso" type="string">
+            <column name="CD_IBAN_PAYS_ISO" length="2" not-null="true">
+                <comment>Code pays pr&${symbol_pound}195;&${symbol_pound}169;fixe de lIBAN</comment>
+            </column>
+        </property>
+        <property name="noPosCdIbanPays" type="short">
+            <column name="NO_POS_CD_IBAN_PAYS" not-null="true">
+                <comment>Position du premier caract&${symbol_pound}195;&${symbol_pound}168;re du code pays dans lIBAN</comment>
+            </column>
+        </property>
+        <property name="noLgrCdIbanPays" type="java.lang.Short">
+            <column name="NO_LGR_CD_IBAN_PAYS">
+                <comment>Nombre de caract&${symbol_pound}195;&${symbol_pound}168;res du code pays dans lIBAN</comment>
+            </column>
+        </property>
+        <property name="noPosCleIban" type="short">
+            <column name="NO_POS_CLE_IBAN" not-null="true">
+                <comment>Position du premier caract&${symbol_pound}195;&${symbol_pound}168;re de la cl&${symbol_pound}195;&${symbol_pound}169; IBAN</comment>
+            </column>
+        </property>
+        <property name="noLgrCleIban" type="short">
+            <column name="NO_LGR_CLE_IBAN" not-null="true">
+                <comment>Nombre de caract&${symbol_pound}195;&${symbol_pound}168;res de la cl&${symbol_pound}195;&${symbol_pound}169; IBAN</comment>
+            </column>
+        </property>
+        <property name="noPosCdBanque" type="short">
+            <column name="NO_POS_CD_BANQUE" not-null="true">
+                <comment>Position du premier caract&${symbol_pound}195;&${symbol_pound}168;re du code banque</comment>
+            </column>
+        </property>
+        <property name="noLgrCdBanque" type="short">
+            <column name="NO_LGR_CD_BANQUE" not-null="true">
+                <comment>Nombre de caract&${symbol_pound}195;&${symbol_pound}168;res du code banque</comment>
+            </column>
+        </property>
+        <property name="noPosCdGuichet" type="java.lang.Short">
+            <column name="NO_POS_CD_GUICHET">
+                <comment>Position du premier caract&${symbol_pound}195;&${symbol_pound}168;re du code guichet</comment>
+            </column>
+        </property>
+        <property name="noLgrCdGuichet" type="short">
+            <column name="NO_LGR_CD_GUICHET" not-null="true">
+                <comment>Nombre de caract&${symbol_pound}195;&${symbol_pound}168;res du code guichet</comment>
+            </column>
+        </property>
+        <property name="noLgrIbanNationalId" type="short">
+            <column name="NO_LGR_IBAN_NATIONAL_ID" not-null="true">
+                <comment>Nombre de caract&${symbol_pound}195;&${symbol_pound}168;res de lIBAN national ID</comment>
+            </column>
+        </property>
+        <property name="noPosNumCpt" type="short">
+            <column name="NO_POS_NUM_CPT" not-null="true">
+                <comment>Position du premier caract&${symbol_pound}195;&${symbol_pound}168;re du num&${symbol_pound}195;&${symbol_pound}169;ro de compte</comment>
+            </column>
+        </property>
+        <property name="noLgrNumCpt" type="short">
+            <column name="NO_LGR_NUM_CPT" not-null="true">
+                <comment>Nombre de caract&${symbol_pound}195;&${symbol_pound}168;res du num&${symbol_pound}195;&${symbol_pound}169;ro de compte</comment>
+            </column>
+        </property>
+        <property name="noLgrIbanTotal" type="short">
+            <column name="NO_LGR_IBAN_TOTAL" not-null="true">
+                <comment>Nombre total de caract&${symbol_pound}195;&${symbol_pound}168;res de lIBAN</comment>
+            </column>
+        </property>
+        <property name="cdSepaStc" type="string">
+            <column name="CD_SEPA_STC" length="1" not-null="true">
+                <comment>Indicateur SEPA : 'O' si l'IBAN a une structure SEPA, sinon 'N'</comment>
+            </column>
+        </property>
+        <property name="noIdBatch" type="short">
+            <column name="NO_ID_BATCH" not-null="true">
+                <comment>Identifiant du batch en cours</comment>
+            </column>
+        </property>
+        <property name="cdActivite" type="string">
+            <column name="CD_ACTIVITE" length="2">
+                <comment>pour les tables de donn&${symbol_pound}195;&${symbol_pound}169;es de r&${symbol_pound}195;&${symbol_pound}169;f&${symbol_pound}195;&${symbol_pound}169;rence ou de codification, indique si la donn&${symbol_pound}195;&${symbol_pound}169;e est A= ACTIVE ou I =
+                INACTIVE</comment>
+            </column>
+        </property>
+        <property name="dtCreation" type="date">
+            <column name="DT_CREATION" length="10" not-null="true">
+                <comment>date de cr&${symbol_pound}195;&${symbol_pound}169;ation de l'occurence</comment>
+            </column>
+        </property>
+        <property name="hrCreation" type="time">
+            <column name="HR_CREATION" length="8" not-null="true">
+                <comment>heure de cr&${symbol_pound}195;&${symbol_pound}169;ation de l'occurence</comment>
+            </column>
+        </property>
+        <property name="niCreation" type="string">
+            <column name="NI_CREATION" length="8" not-null="true">
+                <comment>user de cr&${symbol_pound}195;&${symbol_pound}169;ation de l'occurence</comment>
+            </column>
+        </property>
+        <property name="dtModif" type="date">
+            <column name="DT_MODIF" length="10">
+                <comment>date de modification de l'occurence</comment>
+            </column>
+        </property>
+        <property name="hrModif" type="time">
+            <column name="HR_MODIF" length="8">
+                <comment>heure de modification de l'occurence</comment>
+            </column>
+        </property>
+        <property name="niModif" type="string">
+            <column name="NI_MODIF" length="8">
+                <comment>user qui a modifier l'occurence</comment>
+            </column>
+        </property>
+        <property name="dtAnnulation" type="date">
+            <column name="DT_ANNULATION" length="10">
+                <comment>date d'annulation de l'occurence</comment>
+            </column>
+        </property>
+        <property name="hrAnnulation" type="time">
+            <column name="HR_ANNULATION" length="8">
+                <comment>heure d'annulation de l'occurence</comment>
+            </column>
+        </property>
+        <property name="niAnnulation" type="string">
+            <column name="NI_ANNULATION" length="8">
+                <comment>user qui a annuler l'occurence</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

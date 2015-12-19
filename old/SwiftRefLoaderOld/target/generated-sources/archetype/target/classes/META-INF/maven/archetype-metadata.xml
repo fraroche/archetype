@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="SwifRefLoader"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <requiredProperties>
+    <requiredProperty key="developerName">
+      <defaultValue>Nicolas Tardy</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="developerEmail">
+      <defaultValue>ntardy@si2m.fr</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="distributionManagementUrl">
+      <defaultValue>http://vliql-usil.si2m.tec:8081/nexus/content/repositories</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="batchName">
+      <defaultValue>SWIFT</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="organizationName">
+      <defaultValue>SI2M</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="mainClassName">
+      <defaultValue>fr.si2m.white.batch.bat.Main</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="developerId">
+      <defaultValue>idei080</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="scmTrunkUrl">
+      <defaultValue>http://lana2029:8080/svn/arch_java_si2m/SwiftRefLoader/trunk</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="projectName">
+      <defaultValue>SwifRefLoader</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+  <fileSets>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/assembly</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.properties</include>
+        <include>**/*.sh</include>
+        <include>**/*.ini</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/java</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>src/test/resources</directory>
+      <includes>
+        <include>**/*.zip</include>
+        <include>**/*.sql</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>SwifRefLoader - go-offline.launch</include>
+        <include>Config  core - hibernate v4.launch</include>
+        <include>SwifRefLoader - clean install.launch</include>
+        <include>Conf JPA - hibernate v4.launch</include>
+        <include>SwifRefLoader - purge, go-offline, resolve-plugins.launch</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>

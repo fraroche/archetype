@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions 
+targetNamespace="urn:v1_0_0:code:error:fwk:si2m:fr"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+	xmlns:ns="urn:v1_0_2:schema:ack:fwk:si2m:fr"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:tns="urn:v1_0_0:code:error:fwk:si2m:fr"
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+	
+    <wsdl:types>
+		<xsi:schema 
+			elementFormDefault="unqualified"
+			targetNamespace="urn:v1_0_0:code:error:fwk:si2m:fr" 
+			xmlns:ack="urn:v1_0_2:schema:ack:fwk:si2m:fr"
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema">
+			<xsi:import namespace="urn:v1_0_2:schema:ack:fwk:si2m:fr" schemaLocation="./ack_v1.0.2.xsd" />
+			<xsi:element name="errorList" type="tns:errorListResponseType" />
+			<xsi:element name="errorCode" type="xs:string" />
+			<xsi:element name="error" type="tns:errorResponseType" />
+			<xsi:complexType name="errorListResponseType">
+				<xsi:sequence>
+					<xsi:element name="acknowledgement" type="ack:ackType" />
+					<xsi:element minOccurs="0" name="errorList" type="tns:errorListType" />
+				</xsi:sequence>
+			</xsi:complexType>
+			<xsi:complexType name="errorResponseType">
+				<xsi:sequence>
+					<xsi:element name="acknowledgement" type="ack:ackType" />
+					<xsi:element minOccurs="0" name="error" type="tns:errorType" />
+				</xsi:sequence>
+			</xsi:complexType>
+			<xsi:complexType name="errorListType">
+				<xsi:sequence maxOccurs="unbounded">
+					<xsi:element name="error" type="tns:errorType" />
+				</xsi:sequence>
+			</xsi:complexType>
+			<xsi:complexType name="errorType">
+				<xsi:sequence>
+					<xsi:element name="code" type="xs:string" />
+					<xsi:element name="message" type="xs:string" />
+				</xsi:sequence>
+			</xsi:complexType>
+		</xsi:schema>
+	</wsdl:types>
+
+	<wsdl:message name="errorIn">
+		<wsdl:part name="parameter" element="tns:errorCode">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="errorOut">
+		<wsdl:part name="parameter" element="tns:error">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="errorListIn">
+	</wsdl:message>
+	<wsdl:message name="errorListOut">
+		<wsdl:part name="parameter" element="tns:errorList">
+		</wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="ErrorCodeType">
+		<wsdl:operation name="getErrorList">
+			<wsdl:input message="tns:errorListIn">
+			</wsdl:input>
+			<wsdl:output message="tns:errorListOut">
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getError">
+			<wsdl:input message="tns:errorIn">
+			</wsdl:input>
+			<wsdl:output message="tns:errorOut">
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="ErrorCodeBindingSoap11" type="tns:ErrorCodeType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="getErrorList">
+			<soap:operation soapAction="urn:getErrorList:error:fwk:mm" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getError">
+			<soap:operation soapAction="urn:getError:error:fwk:mm" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="ErrorCodeBindingSoap12" type="tns:ErrorCodeType">
+		<soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="getErrorList">
+			<soap12:operation soapAction="urn:getErrorList:error:fwk:mm" soapActionRequired="true" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="getError">
+			<soap12:operation soapAction="urn:getError:error:fwk:mm" soapActionRequired="true" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="ErrorCodeService">
+		<wsdl:port name="ErrorCodeService_WAD_V100_Soap12Port" binding="tns:ErrorCodeBindingSoap12">
+			<soap12:address location="No Target Adress" />
+		</wsdl:port>
+		<wsdl:port name="ErrorCodeService_WAD_V100_Soap11Port" binding="tns:ErrorCodeBindingSoap11">
+			<soap:address location="No Target Address" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

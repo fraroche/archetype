@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns="urn:v1_0_2:schema:ack:fwk:si2m:fr" 
+	attributeFormDefault="unqualified" 
+	elementFormDefault="unqualified" 
+	targetNamespace="urn:v1_0_2:schema:ack:fwk:si2m:fr">
+    <xs:element name="ack" type="ackType"/>
+
+	<xs:simpleType name="codeRetourType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="5" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="codeType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="5" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="libelleCourtType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="50" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="messageType">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="256" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="natureType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="T" />
+			<xs:enumeration value="F" />
+			<xs:enumeration value="A" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="ackType">
+		<xs:sequence>
+			<xs:element name="codeRetour" type="codeRetourType" />
+			<xs:element minOccurs="0" name="fault" type="faultType">
+				<xs:key name="error">
+					<xs:selector xpath="error" />
+					<xs:field xpath="@numOrdre" />
+				</xs:key>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="contextType">
+		<xs:sequence>
+			<xs:element name="user" type="xs:string" />
+			<xs:element name="timestamp" type="xs:dateTime" />
+			<xs:element name="application_ID" type="xs:string" />
+			<xs:element name="server_IP" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="faultType">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string" />
+			<xs:element name="nature" type="natureType">
+				<xs:annotation>
+					<xs:documentation>T:Technique, F:Fonctionnel, A: Applicatif</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element maxOccurs="unbounded" name="error" type="errorType" />
+			<xs:element minOccurs="0" name="infosComplementaires" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="errorType">
+		<xs:sequence>
+			<xs:element name="code" type="codeType" />
+			<xs:element minOccurs="0" name="libelleCourt" type="libelleCourtType" />
+			<xs:element minOccurs="0" name="message" type="messageType" />
+			<xs:element name="context" type="contextType" />
+		</xs:sequence>
+		<xs:attribute name="numOrdre" type="xs:int" use="required" />
+	</xs:complexType>
+</xs:schema>

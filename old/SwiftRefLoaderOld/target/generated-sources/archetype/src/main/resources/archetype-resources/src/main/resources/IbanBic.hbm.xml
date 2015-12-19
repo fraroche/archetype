@@ -1,0 +1,122 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4 nov. 2013 15:49:58 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="${groupId}.orm.IbanBic" table="RNDIBBC">
+        <comment>table de correspondance IBAN BIC</comment>
+        <id name="noInterne" type="int">
+            <column name="NO_INTERNE" />
+            <generator class="increment" />
+        </id>
+        <property name="liNomBanque" type="string">
+            <column name="LI_NOM_BANQUE" length="105" not-null="true">
+                <comment>Nom de l'&${symbol_pound}195;&${symbol_pound}169;tablissement d&${symbol_pound}195;&${symbol_pound}169;tenteur de l'IBAN</comment>
+            </column>
+        </property>
+        <property name="liNomPays" type="string">
+            <column name="LI_NOM_PAYS" length="70" not-null="true">
+                <comment>Nom du pays de r&${symbol_pound}195;&${symbol_pound}169;sidence de l'&${symbol_pound}195;&${symbol_pound}169;tablissement d&${symbol_pound}195;&${symbol_pound}169;tenteur de l'IBAN</comment>
+            </column>
+        </property>
+        <property name="cdPaysIso" type="string">
+            <column name="CD_PAYS_ISO" length="2" not-null="true">
+                <comment>Code iso du pays de l'&${symbol_pound}195;&${symbol_pound}169;tablissement</comment>
+            </column>
+        </property>
+        <property name="cdIbanPaysIso" type="string">
+            <column name="CD_IBAN_PAYS_ISO" length="2" not-null="true">
+                <comment>code iso du pays (3166-1) de l'IBAN. Dans certains cas, il peut &${symbol_pound}195;&${symbol_pound}170;tre diff&${symbol_pound}195;&${symbol_pound}169;rent de celui de l'&${symbol_pound}195;&${symbol_pound}169;tablissement.</comment>
+            </column>
+        </property>
+        <property name="cdIbanBic" type="string">
+            <column name="CD_IBAN_BIC" length="11" not-null="true">
+                <comment>Code IBAN BIC ( 11 caract&${symbol_pound}195;&${symbol_pound}168;res ou 8+XXX)</comment>
+            </column>
+        </property>
+        <property name="cdRoutingBic" type="string">
+            <column name="CD_ROUTING_BIC" length="11" not-null="true">
+                <comment>routing BIC : code de remplacement utilis&${symbol_pound}195;&${symbol_pound}169; lorsque le IBAN BIC n'est pas connect&${symbol_pound}195;&${symbol_pound}169; &${symbol_pound}195;&${symbol_pound}160; ${batchName}</comment>
+            </column>
+        </property>
+        <property name="cdIbanNationalId" type="string">
+            <column name="CD_IBAN_NATIONAL_ID" length="15" not-null="true">
+                <comment>national ID tel qu'inclus dans l'IBAN</comment>
+            </column>
+        </property>
+        <property name="liSerCtxt" type="string">
+            <column name="LI_SER_CTXT" length="8">
+                <comment>contexte SEPA de l'&${symbol_pound}195;&${symbol_pound}169;tablissement finanacier. Si participant SEPA alors "SEPA" sinon vide</comment>
+            </column>
+        </property>
+        <property name="dtDebutAppli" type="date">
+            <column name="DT_DEBUT_APPLI" length="10" not-null="true">
+                <comment>date de d&${symbol_pound}195;&${symbol_pound}169;but d'application de la correspondance IBAN_NATIONAL_ID/BIC</comment>
+            </column>
+        </property>
+        <property name="dtFinAppli" type="date">
+            <column name="DT_FIN_APPLI" length="10">
+                <comment>date de fin d'application de la correspondance (IBAN_NATIONAL_ID/BIC)</comment>
+            </column>
+        </property>
+        <property name="noIdBatch" type="short">
+            <column name="NO_ID_BATCH" not-null="true">
+                <comment>Identifiant du batch en cours</comment>
+            </column>
+        </property>
+        <property name="cdEtat" type="string">
+            <column name="CD_ETAT" length="1" not-null="true">
+                <comment>&${symbol_pound}195;&${symbol_pound}169;tat d'une occurence. Non renseign&${symbol_pound}195;&${symbol_pound}169; par d&${symbol_pound}195;&${symbol_pound}169;faut. A si occurence annul&${symbol_pound}195;&${symbol_pound}169;e. M si l'occurence modifi&${symbol_pound}195;&${symbol_pound}169;e (
+                cette occurence contient la donn&${symbol_pound}195;&${symbol_pound}169;es avant la mise &${symbol_pound}195;&${symbol_pound}160; jour).</comment>
+            </column>
+        </property>
+        <property name="dtCreation" type="date">
+            <column name="DT_CREATION" length="10" not-null="true">
+                <comment>date de cr&${symbol_pound}195;&${symbol_pound}169;ation de l'occurence</comment>
+            </column>
+        </property>
+        <property name="hrCreation" type="time">
+            <column name="HR_CREATION" length="8" not-null="true">
+                <comment>heure de cr&${symbol_pound}195;&${symbol_pound}169;ation de l'occurence</comment>
+            </column>
+        </property>
+        <property name="niCreation" type="string">
+            <column name="NI_CREATION" length="8" not-null="true">
+                <comment>user de cr&${symbol_pound}195;&${symbol_pound}169;ation de l'occurence</comment>
+            </column>
+        </property>
+        <property name="dtModif" type="date">
+            <column name="DT_MODIF" length="10">
+                <comment>date de modification de l'occurence</comment>
+            </column>
+        </property>
+        <property name="hrModif" type="time">
+            <column name="HR_MODIF" length="8">
+                <comment>heure de modification de l'occurence</comment>
+            </column>
+        </property>
+        <property name="niModif" type="string">
+            <column name="NI_MODIF" length="8">
+                <comment>user qui a modifier l'occurence</comment>
+            </column>
+        </property>
+        <property name="dtAnnulation" type="date">
+            <column name="DT_ANNULATION" length="10">
+                <comment>date d'annulation de l'occurence</comment>
+            </column>
+        </property>
+        <property name="hrAnnulation" type="time">
+            <column name="HR_ANNULATION" length="8">
+                <comment>heure d'annulation de l'occurence</comment>
+            </column>
+        </property>
+        <property name="niAnnulation" type="string">
+            <column name="NI_ANNULATION" length="8">
+                <comment>user qui a annuler l'occurence</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

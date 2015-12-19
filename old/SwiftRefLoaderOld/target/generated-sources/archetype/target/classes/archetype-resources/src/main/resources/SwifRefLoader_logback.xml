@@ -1,0 +1,73 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+		<resetJUL>true</resetJUL>
+	</contextListener>
+	 <!-- sends logs to logback-beagle -->
+	<!-- <consolePlugin /> -->
+	
+	<appender name="ReportingFile" class="ch.qos.logback.core.FileAppender">
+		<file>${symbol_dollar}{output.filePaths.reporting}</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="AnnosFonctFile" class="ch.qos.logback.core.FileAppender">
+		<file>${symbol_dollar}{output.filePaths.anosFonct}</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="IbanPlusProcessedLinesFile" class="ch.qos.logback.core.FileAppender">
+		<file>${symbol_dollar}{output.filePaths.ibanPlusFull.processedLines}</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="IbanPlusUnprocessedLinesFile" class="ch.qos.logback.core.FileAppender">
+		<file>${symbol_dollar}{output.filePaths.ibanPlusFull.unprocessedLines}</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%msg%n</pattern>
+		</encoder>
+	</appender>
+	<appender name="AnnosTechFile" class="ch.qos.logback.core.FileAppender">
+		<file>${symbol_dollar}{output.filePaths.anosTech}</file>
+		<append>true</append>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} %-5level %logger - %msg%n%rEx</pattern>
+		</encoder>
+	</appender>
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{HH:mm:ss.SSS} %-5level %logger{10} - %msg%n%rEx</Pattern>
+		</layout>
+	</appender>
+	
+	<logger name="reporting" level="INFO" additivity="false">
+		<appender-ref ref="ReportingFile" />
+	</logger>
+	<logger name="fonctionnel" level="INFO" additivity="false">
+		<appender-ref ref="ReportingFile" />
+	</logger>
+	<logger name="IbanPlusProcessed" level="INFO" additivity="false">
+		<appender-ref ref="IbanPlusProcessedLinesFile" />
+	</logger>
+	<logger name="IbanPlusUnprocessed" level="INFO" additivity="false">
+		<appender-ref ref="IbanPlusUnprocessedLinesFile" />
+	</logger>
+	<logger name="org.hibernate" level="WARN"/>
+	<logger name="fr.si2m" level="INFO" additivity="false">
+		<appender-ref ref="AnnosTechFile" />
+	</logger>
+	
+	<root level="ERROR">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

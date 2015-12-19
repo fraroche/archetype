@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.archive.autodetection"></property>
+<!--     	<property name="hibernate.show_sql">true</property> -->
+<!--     	<property name="hibernate.generate_statistics">true</property> -->
+    	<property name="hibernate.connection.autocommit">false</property>
+<!--     	<property name="hibernate.jdbc.batch_size">30</property> -->
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        
+<!--         <property name="hibernate.default_schema">RP_SWIFT</property> -->
+<!--         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property> -->
+<!--         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/RP_SWIFT</property> -->
+<!--         <property name="hibernate.connection.username">root</property> -->
+<!--         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> -->
+        
+    	<property name="hibernate.default_schema">EJRA01A</property>
+		<property name="hibernate.connection.driver_class">com.ibm.db2.jcc.DB2Driver</property>
+		<property name="hibernate.connection.url">jdbc:db2://vipalp21.si2m.tec:22446/E2D3</property>
+		<property name="hibernate.connection.username">SEJRRP00</property>
+		<property name="hibernate.connection.password">7CA2D3F9</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.DB2390Dialect</property>
+		
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <mapping resource="IbanBic.hbm.xml" />
+        <mapping resource="IbanExcludes.hbm.xml" />
+        <mapping resource="IbanStructures.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

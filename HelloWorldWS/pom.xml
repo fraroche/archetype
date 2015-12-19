@@ -1,0 +1,543 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<properties>
+		<slf4j.version>1.7.2</slf4j.version>
+		<axiom.version>1.2.13</axiom.version>
+		<axis2.version>1.6.2</axis2.version>
+		<axis2.service.name>HelloWorld</axis2.service.name>
+		<axis2.service.group>${axis2.service.name}</axis2.service.group>
+		<axis2.wsdl.path>${project.build.sourceDirectory}/../resources</axis2.wsdl.path>
+		<axis2.wsdl.name>${axis2.service.name}.wsdl</axis2.wsdl.name>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>fr.si2m.zone.ws</groupId>
+	<artifactId>HelloWorldWS</artifactId>
+	<packaging>war</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<scm>
+		<url>http://lana2029:8080/svn/arch_java_si2m/HelloWorldWS/trunk/</url>
+		<connection>scm:svn:http://lana2029:8080/svn/arch_java_si2m/HelloWorldWS/trunk</connection>
+		<developerConnection>scm:svn:http://lana2029:8080/svn/arch_java_si2m/HelloWorldWS/trunk</developerConnection>
+	</scm>
+	<developers>
+		<developer>
+			<id>idei080</id>
+			<name>Nicolas Tardy</name>
+			<email>ntardy@si2m.fr</email>
+			<organization>SI2M</organization>
+			<roles>
+				<role>dev</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<dependencies>
+		
+		<!-- ///////////////////////////////// -->
+		<!--         CONF WEB SERVICE          -->
+		<!--                                   -->
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-stax-api_1.0_spec</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>2.2.0</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<!-- /////////////////////////// -->
+		<!--        CONF AXIS 2          -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-local</artifactId>
+			<version>${axis2.version}</version>
+			<scope>runtime</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-transport-http</artifactId>
+			<version>${axis2.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-jaxws</artifactId>
+			<version>${axis2.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.ws.commons.axiom</groupId>
+			<artifactId>axiom-api</artifactId>
+			<version>${axiom.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.ws.commons.axiom</groupId>
+			<artifactId>axiom-impl</artifactId>
+			<version>${axiom.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!--      FIN CONF AXIS 2        -->
+		
+		<!-- /////////////////////////// -->
+		<!--    CONF MODULES AXIS 2      -->
+		<!-- SOAPMONITOR -->
+<!-- De-commenter les lignes suivantes pour integer le monitoring au livrable. -->
+<!-- Effectuer l'operation equivalente sur le web.xml -->
+		<dependency>
+			<groupId>org.apache.axis2</groupId>
+			<artifactId>axis2-soapmonitor-servlet</artifactId>
+			<version>${axis2.version}</version>
+		</dependency>
+		<!-- RAMPART -->
+		<dependency>
+			<groupId>org.apache.rampart</groupId>
+			<artifactId>rampart-core</artifactId>
+			<version>${axis2.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<artifactId>xml-apis</artifactId>
+			<groupId>xml-apis</groupId>
+			<version>1.3.04</version>
+		</dependency>
+		<!--   FIN CONF MODULES AXIS 2   -->
+		<!--     FIN CONF WEB SERVICE          -->
+		
+		
+		<!-- ///////////////////////////////// -->
+		<!--           CONF LOGS               -->
+		<!--                                   -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.0.9</version>
+		</dependency>
+		<!--          FIN CONF LOGS            -->
+		<!--  //////////////////////////////// -->
+		
+		
+		<dependency>
+			<groupId>commons-configuration</groupId>
+			<artifactId>commons-configuration</artifactId>
+			<version>1.9</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>commons-codec</groupId> -->
+<!-- 			<artifactId>commons-codec</artifactId> -->
+<!-- 			<version>1.3</version> -->
+<!-- 		</dependency> -->
+		
+		<dependency>
+			<groupId>fr.si2m.csnt.socle</groupId>
+			<artifactId>exception-si2m</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+<!-- De-commenter les lignes suivantes pour integrer le monitoring au livrable. -->
+<!-- Effectuer l'operation correspondante sur le web.xml -->
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>unpack-soapmonitor-applet</id>
+						<phase>compile</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>org.apache.axis2</groupId>
+									<artifactId>axis2-soapmonitor-servlet</artifactId>
+									<version>${axis2.version}</version>
+									<type>jar</type>
+									<overWrite>false</overWrite>
+									<outputDirectory>${basedir}/src/main/webapp</outputDirectory>
+									<outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>
+									<includes>**/applet/*.class</includes>
+								</artifactItem>
+							</artifactItems>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<archive>
+						<manifestEntries>
+							<Specification-Title>${project.name}</Specification-Title>
+							<Specification-Version>N/A</Specification-Version>
+							<Specification-Vendor>MALAKOFF-MEDERIC</Specification-Vendor>
+							<Implementation-Title>${project.name}</Implementation-Title>
+							<Implementation-Version>${project.version}</Implementation-Version>
+							<Implementation-Vendor>SI2M</Implementation-Vendor>
+							<Built-By>${user.name}</Built-By>
+						</manifestEntries>
+					</archive>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<!-- adapt wsdl to the WS's version number -->
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<encoding>UTF-8</encoding>
+							<outputDirectory>${basedir}/target/versionned-service</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${axis2.wsdl.path}</directory>
+									<filtering>true</filtering>
+									<includes>
+										<include>${axis2.wsdl.name}</include>
+										<include>ErrorCodeService.wsdl</include>
+										<include>*.xsd</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.axis2</groupId>
+				<artifactId>axis2-wsdl2code-maven-plugin</artifactId>
+				<version>${axis2.version}</version>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.axis2</groupId>
+						<artifactId>axis2</artifactId>
+						<version>${axis2.version}</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<!-- Service ${axis2.wsdl.name} proxy generation -->
+						<id>${axis2.wsdl.name}2code</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>wsdl2code</goal>
+						</goals>
+						<configuration>
+							<!-- http://wso2.org/library/tutorials/reference-guide-axis2-code-generation-parameters-part-1 -->
+							<packageName>fr.si2m.zone.ws</packageName>
+							<wsdlFile>${basedir}/target/versionned-service/${axis2.wsdl.name}</wsdlFile>
+							<databindingName>adb</databindingName>
+							<generateServerSide>true</generateServerSide>
+							<generateServerSideInterface>true</generateServerSideInterface>
+							<generateServicesXml>true</generateServicesXml>
+							<generateAllClasses>false</generateAllClasses>
+							<unwrap>true</unwrap>
+							<!-- avec jaxbri les lignes qui suivent ne fonctionnent pas pour la 
+								partie gen code de xjc. -> on utilise ant -->
+							<!-- <outputDirectory>${project.build.sourceDirectory}/../</outputDirectory> -->
+							<!-- <targetSourceFolderLocation>java</targetSourceFolderLocation> -->
+							<!-- <targetResourcesFolderLocation>webapp/WEB-INF/services/${axis2.service.group}/META-INF</targetResourcesFolderLocation> -->
+						</configuration>
+					</execution>
+					
+					<!-- Service ErrorCodeService.wsdl proxy generation -->
+					<execution>
+						<id>ErrorCodeService.wsdl2code</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>wsdl2code</goal>
+						</goals>
+						<configuration>
+							<packageName>fr.si2m.fwk</packageName>
+							<wsdlFile>${basedir}/target/versionned-service/ErrorCodeService.wsdl</wsdlFile>
+							<databindingName>adb</databindingName>
+							<generateServerSide>true</generateServerSide>
+							<generateServerSideInterface>true</generateServerSideInterface>
+							<generateServicesXml>true</generateServicesXml>
+							<generateAllClasses>false</generateAllClasses>
+							<outputDirectory>${basedir}/target/generated-sources/axis2/wsdl2code/ErrorCodeService</outputDirectory>
+							<unwrap>false</unwrap>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.4</version>
+				<executions>
+					<execution>
+						<id>${axis2.wsdl.name}MoveGenSources</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo message="copie des classes dans ${project.build.sourceDirectory}" />
+								<patternset id="sources.to.copy">
+								<!-- Uncomment folowing line after first generation -->
+<!-- 									<exclude name="**/*Skeleton.java" /> -->
+								</patternset>
+								<path id="sources.to.copy.path">
+									<fileset dir="${project.build.outputDirectory}/../generated-sources/axis2/wsdl2code/src">
+										<patternset refid="sources.to.copy" />
+									</fileset>
+								</path>
+								<pathconvert pathsep="${line.separator}	|-- "
+											property="echo.sources.to.copy.path"
+											refid="sources.to.copy.path"/>
+								<echo>${echo.sources.to.copy.path}</echo>
+								<copy toDir="${project.build.sourceDirectory}">
+									<fileset dir="${project.build.outputDirectory}/../generated-sources/axis2/wsdl2code/src">
+										<patternset refid="sources.to.copy" />
+									</fileset>
+								</copy>
+								<echo message="copie de service.xml dans ${project.build.sourceDirectory}/../webapp/WEB-INF/services" />
+								<mkdir dir="${project.build.sourceDirectory}/../webapp/WEB-INF/services/${axis2.service.group}" />
+								<mkdir dir="${project.build.sourceDirectory}/../webapp/WEB-INF/services/${axis2.service.group}/META-INF" />
+								<copy toDir="${project.build.sourceDirectory}/../webapp/WEB-INF/services/${axis2.service.group}/META-INF" failonerror="false">
+									<fileset dir="${project.build.outputDirectory}/../generated-sources/axis2/wsdl2code/resources">
+										<include name="services.xml" />
+										<include name="*.wsdl" />
+										<include name="*.xsd" />
+									</fileset>
+								</copy>
+								<delete dir="${project.build.outputDirectory}/../generated-sources/axis2/wsdl2code/src" />
+								<delete file="${project.build.outputDirectory}/../generated-sources/axis2/wsdl2code/resources/services.xml" />
+								<echo message="il faut copier a la main les classes de test dans ${project.build.testSourceDirectory}" />
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>ErrorCodeServiceMoveGenSources</id>
+						<phase>process-sources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo message="copie des classes dans ${project.build.sourceDirectory}" />
+								<patternset id="sources.to.copy">
+								<!-- Uncomment folowing line after first generation -->
+									<exclude name="**/*Skeleton.java" />
+								</patternset>
+								<path id="sources.to.copy.path">
+									<fileset dir="${project.build.outputDirectory}/../generated-sources/axis2/wsdl2code/ErrorCodeService/src">
+										<patternset refid="sources.to.copy" />
+									</fileset>
+								</path>
+								<pathconvert pathsep="${line.separator}	|-- "
+											property="echo.sources.to.copy.path"
+											refid="sources.to.copy.path"/>
+								<echo>${echo.sources.to.copy.path}</echo>
+								<copy toDir="${project.build.sourceDirectory}">
+									<fileset dir="${project.build.outputDirectory}/../generated-sources/axis2/wsdl2code/ErrorCodeService/src">
+										<patternset refid="sources.to.copy" />
+									</fileset>
+								</copy>
+								<echo message="copie de service.xml dans ${project.build.sourceDirectory}/../webapp/WEB-INF/services" />
+								<mkdir dir="${project.build.sourceDirectory}/../webapp/WEB-INF/services/error" />
+								<mkdir dir="${project.build.sourceDirectory}/../webapp/WEB-INF/services/error/META-INF" />
+								<copy toDir="${project.build.sourceDirectory}/../webapp/WEB-INF/services/error/META-INF" failonerror="false">
+									<fileset dir="${project.build.outputDirectory}/../generated-sources/axis2/wsdl2code/ErrorCodeService/resources">
+										<include name="services.xml" />
+										<include name="*.wsdl" />
+										<include name="*.xsd" />
+									</fileset>
+								</copy>
+								<delete dir="${project.build.outputDirectory}/../generated-sources/axis2/wsdl2code/ErrorCodeService/src" />
+								<delete file="${project.build.outputDirectory}/../generated-sources/axis2/wsdl2code/ErrorCodeService/resources/services.xml" />
+								<echo message="il faut copier a la main les classes de test dans ${project.build.testSourceDirectory}" />
+							</tasks>
+						</configuration>
+					</execution>
+					<execution>
+						<id>CleanUpSources</id>
+						<phase>clean</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<tasks>
+								<echo message="Liste des classes dans ${project.build.sourceDirectory}" />
+								<path id="sources.list.path">
+									<fileset dir="${project.build.sourceDirectory}"/>
+								</path>
+								<pathconvert pathsep="${line.separator}	|-- "             
+											property="echo.sources.list.path"             
+											refid="sources.list.path"/>
+								<echo>${echo.sources.list.path}</echo>
+								<echo message="Suppression des classes générées dans ${project.build.sourceDirectory}" />
+								<patternset id="sources.to.delete">
+									<include name="**/ws/**" />
+									<include name="**/schema/**" />
+									<exclude name="**/*Skeleton*" />
+									<exclude name="**/*PWCBHandler*" />
+								</patternset>
+								<path id="sources.to.delete.path">
+									<fileset dir="${project.build.sourceDirectory}">
+										<patternset refid="sources.to.delete" />
+									</fileset>
+								</path>
+								<pathconvert pathsep="${line.separator}	|-- "
+											property="echo.sources.to.delete.path"
+											refid="sources.to.delete.path"/>
+								<echo>${echo.sources.to.delete.path}</echo>
+								<delete>
+									<fileset dir="${project.build.sourceDirectory}">
+										<patternset refid="sources.to.delete" />
+									</fileset>
+								</delete>
+							</tasks>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<optimize>true</optimize>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.4.2</version>
+				<configuration>
+					<skipTests>false</skipTests>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.0-beta-9</version>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>2.8</version>
+				</plugin>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-dependency-plugin</artifactId>
+										<versionRange>[2.8,)</versionRange>
+										<goals>
+											<goal>unpack</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-antrun-plugin</artifactId>
+										<versionRange>[1.4,)</versionRange>
+										<goals>
+											<goal>run</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

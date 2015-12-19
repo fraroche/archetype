@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" 
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" 
+	xmlns:ModelMetier="urn:v1_0_0:schema:zone:si2m:fr" 
+	xmlns:ack="urn:v1_0_2:schema:ack:fwk:si2m:fr" 
+	xmlns:tns="http://ws.zone.si2m.fr" 
+	targetNamespace="http://ws.zone.si2m.fr">
+	<types>
+		<xs:schema targetNamespace="http://ws.zone.si2m.fr" elementFormDefault="qualified" attributeFormDefault="qualified">
+			<xs:import schemaLocation="./ModelMetier_v1.0.0.xsd" namespace="urn:v1_0_0:schema:zone:si2m:fr" />
+			<xs:import schemaLocation="./ack_v1.0.2.xsd" namespace="urn:v1_0_2:schema:ack:fwk:si2m:fr" />
+			<xs:element name="getMe" type="ModelMetier:nomPrenomType" />
+			<xs:element name="getYou" type="xs:string" />
+			<xs:element name="getHelloWorldFault" type="ack:ackType" />
+		</xs:schema>
+	</types>
+
+	<message name="getHelloWorldRequest">
+		<part name="parameters" element="tns:getMe" />
+	</message>
+	<message name="getHelloWorldResponse">
+		<part name="parameters" element="tns:getYou" />
+	</message>
+	<message name="getHelloWorldFaultMsg">
+		<part name="parameters" element="tns:getHelloWorldFault" />
+	</message>
+
+	<portType name="HelloWorldPortType">
+		<operation name="getHelloWorld">
+			<input message="tns:getHelloWorldRequest" />
+			<output message="tns:getHelloWorldResponse" />
+			<fault name="getHelloWorldFault" message="tns:getHelloWorldFaultMsg" />
+		</operation>
+	</portType>
+
+	<binding name="HelloWorldSoap11Binding" type="tns:HelloWorldPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="getHelloWorld">
+			<soap:operation style="document" soapAction="http://ws.zone.si2m.fr/getHelloWorld" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+			<fault name="getHelloWorldFault">
+				<soap:fault name="getHelloWorldFault" use="literal" />
+			</fault>
+		</operation>
+	</binding>
+	<binding name="HelloWorldSoap12Binding" type="tns:HelloWorldPortType">
+		<soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="getHelloWorld">
+			<soap12:operation style="document" soapAction="http://ws.zone.si2m.fr/getHelloWorld" />
+			<input>
+				<soap12:body use="literal" />
+			</input>
+			<output>
+				<soap12:body use="literal" />
+			</output>
+			<fault name="getHelloWorldFault">
+				<soap12:fault name="getHelloWorldFault" use="literal" />
+			</fault>
+		</operation>
+	</binding>
+
+	<service name="HelloWorld">
+		<port name="HelloWorld_${project.version}_Soap11" binding="tns:HelloWorldSoap11Binding">
+			<soap:address location="No Target Address" />
+		</port>
+		<port name="HelloWorld_${project.version}_Soap12" binding="tns:HelloWorldSoap12Binding">
+			<soap12:address location="No Target Address" />
+		</port>
+	</service>
+</definitions>

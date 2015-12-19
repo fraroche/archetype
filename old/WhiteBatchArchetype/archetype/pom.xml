@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>fr.si2m.white.batch</groupId>
+  <artifactId>WhiteBatch</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>WhiteBatch</name>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>2.2</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <developers>
+    <developer>
+      <id>idei080</id>
+      <name>Nicolas Tardy</name>
+      <email>ntardy@si2m.fr</email>
+      <organization>SI2M</organization>
+      <roles>
+        <role>dev</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:svn:http://lana2029:8080/svn/arch_java_si2m/SWIFT/SwiftRefLoader/trunk</connection>
+    <developerConnection>scm:svn:http://lana2029:8080/svn/arch_java_si2m/SWIFT/SwiftRefLoader/trunk</developerConnection>
+    <url>http://lana2029:8080/svn/arch_java_si2m/SwiftRefLoader/trunk/</url>
+  </scm>
+</project>

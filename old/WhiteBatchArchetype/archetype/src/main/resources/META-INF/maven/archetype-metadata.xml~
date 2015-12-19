@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="SwiftRefLoader"
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <requiredProperties>
+    <requiredProperty key="developerName">
+      <defaultValue>Your Name</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="developerEmail">
+      <defaultValue>yname@si2m.fr</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="distributionManagementUrl">
+      <defaultValue>http://vliql-usil.si2m.tec:8081/nexus/content/repositories</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="numChaineBatch">
+      <defaultValue>450</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="batchName">
+      <defaultValue>BATCH_NAME</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="organizationName">
+      <defaultValue>SI2M</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="mainClassName">
+      <defaultValue>fr.si2m.white.batch.bat.Main</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="developerId">
+      <defaultValue>XXXX</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="projectName">
+      <defaultValue>WhiteBatch</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+  <fileSets>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/assembly</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.properties</include>
+        <include>**/*.sh</include>
+        <include>**/*.ini</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" packaged="true" encoding="UTF-8">
+      <directory>src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/java</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/root</directory>
+      <includes>
+        <include>**/*.launch</include>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>${projectName} - purge, go-offline, resolve-plugins.launch</include>
+        <include>${projectName} - clean install.launch</include>
+        <include>${projectName} - go-offline.launch</include>
+        <include>Config  core - hibernate v4.launch</include>
+        <include>Conf JPA - hibernate v4.launch</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>
